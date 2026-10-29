@@ -1,0 +1,67 @@
+#:import dp kivy.metrics.dp
+
+<LoginScreen>:
+    theme_bg_color: "Custom"
+    md_bg_color: 1, 0.86, 0.77, 1
+
+    MDIconButton:
+        icon: "arrow-left"
+        pos_hint: {"x": .05, "top": .92}
+        theme_icon_color: "Custom"
+        icon_color: 0, .592, .698, 1
+        on_release: root.volver()
+
+    MDBoxLayout:
+        orientation: "vertical"
+        adaptive_height: True
+        size_hint_x: None
+        width: "320dp"
+        spacing: "14dp"
+        pos_hint: {"center_x": .5, "center_y": .5}
+
+        MDLabel:
+            text: "Proyecto Integrador"
+            font_style: "Headline"
+            role: "small"
+            theme_font_size: "Custom"
+            font_size: "28sp"
+            bold: True
+            halign: "center"
+            adaptive_height: True
+            padding: 0, 0, 0, "16dp"
+            theme_text_color: "Custom"
+            text_color: 0, .592, .698, 1
+
+        MDTextField:
+            id: correo
+            mode: "filled"
+            size_hint_y: None
+            height: "56dp"
+            radius: [dp(8), dp(8), dp(8), dp(8)]
+            MDTextFieldHintText:
+                text: "Correo"
+
+        MDTextField:
+            id: contrasena
+            mode: "filled"
+            password: True
+            size_hint_y: None
+            height: "56dp"
+            radius: [dp(8), dp(8), dp(8), dp(8)]
+            MDTextFieldHintText:
+                text: "Contraseña"
+
+        MDButton:
+            style: "filled"
+            size_hint: 1, None
+            height: "48dp"
+            radius: [dp(6), dp(6), dp(6), dp(6)]
+            theme_bg_color: "Custom"
+            md_bg_color: 0, .800, .698, 1
+            on_release: root.iniciar_sesion()
+            MDButtonText:
+                text: "Iniciar sesión"
+                pos_hint: {"center_x": .5, "center_y": .5}
+                theme_text_color: "Custom"
+                text_color: 1, 1, 1, 1
+                bold: True

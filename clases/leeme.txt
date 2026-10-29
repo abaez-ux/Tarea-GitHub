@@ -1,0 +1,2 @@
+Esta carpeta queda vacía por ahora.
+En la clase 3 va a tener las clases de Python (por ejemplo, Usuario).
